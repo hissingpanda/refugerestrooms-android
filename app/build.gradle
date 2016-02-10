@@ -10,9 +10,9 @@ android {
         }
         release {
             keyAlias 'refuge'
-            keyPassword System.console() != null ? System.console().readLine("\nKey password: ") : ""
+            keyPassword '$System.env.KEYPASS'
             storeFile file('../refuge-release-key.keystore')
-            storePassword System.console() != null ? System.console().readLine("\nKeystore password: ") : ""
+            storePassword '$System.env.KEYPASS'
         }
     }
     compileSdkVersion 22
@@ -44,7 +44,4 @@ dependencies {
     compile 'com.mcxiaoke.volley:library:1.0.17'
     compile 'com.google.android.gms:play-services:7.5.0'
     compile 'com.android.support:design:22.2.0'
-}
-run{
-    standardInput = System.in
 }
