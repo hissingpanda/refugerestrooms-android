@@ -21,8 +21,8 @@ android {
         applicationId "org.refugerestrooms"
         minSdkVersion 14
         targetSdkVersion 22
-        versionCode 6
-        versionName "1.2"
+        versionCode 7
+        versionName "1.2.1"
     }
     buildTypes {
         release {
@@ -44,4 +44,7 @@ dependencies {
     compile 'com.mcxiaoke.volley:library:1.0.17'
     compile 'com.google.android.gms:play-services:7.5.0'
     compile 'com.android.support:design:22.2.0'
+}
+run{
+    standardInput = System.in
 }
